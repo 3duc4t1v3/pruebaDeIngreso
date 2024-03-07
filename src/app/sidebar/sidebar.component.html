@@ -1,0 +1,18 @@
+<!-- horizontal-menu.component.html -->
+
+<div class="horizontal-menu">
+  <button class="hamburger-btn" *ngIf="!isOpen" (click)="openMenu()">&#9776;</button>
+  <button class="close-btn" *ngIf="isOpen" (click)="closeMenu()">X</button>
+  <ul [ngClass]="{ 'open': isOpen }">
+    <li [routerLink] ="['/content']">Item 1</li>
+    <li [routerLink] ="['/test']">Item 2</li>
+    <li [routerLink] ="['/home']">Item 3
+      <ul class="submenu">
+        <li>Subitem 1</li>
+        <li>Subitem 2</li>
+        <li>Subitem 3</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
