@@ -1,18 +1,22 @@
 <!-- horizontal-menu.component.html -->
 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <div class="horizontal-menu">
   <button class="hamburger-btn" *ngIf="!isOpen" (click)="openMenu()">&#9776;</button>
   <button class="close-btn" *ngIf="isOpen" (click)="closeMenu()">X</button>
+
+    <img class="logo" src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" alt="">
+
   <ul [ngClass]="{ 'open': isOpen }">
     <li [routerLink] ="['/content']">Item 1</li>
     <li [routerLink] ="['/test']">Item 2</li>
     <li [routerLink] ="['/home']">Item 3
       <ul class="submenu">
-        <li>Subitem 1</li>
-        <li>Subitem 2</li>
-        <li>Subitem 3</li>
+        <li [routerLink] ="['/subitemuno']">Subitem 1</li>
+        <li [routerLink] ="['/subitemdos']">Subitem 2</li>
+        <li [routerLink] ="['/subitemtres']">Subitem 3</li>
       </ul>
     </li>
   </ul>
-</div>
+</div><br><br><br>
 <router-outlet></router-outlet>

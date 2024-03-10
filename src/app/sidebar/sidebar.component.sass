@@ -1,10 +1,16 @@
 // horizontal-menu.component.sass
 
+.logo
+  width: 30px
+  height: 30px
+  margin: 3px
+
 .horizontal-menu
   display: flex
   background-color: #333
   color: #fff
   position: relative
+  font-family: 'Roboto', sans-serif // Aplica la tipografía Roboto al menú
   background-color: #ccc // Fondo gris para el menú
 
   .hamburger-btn
@@ -44,7 +50,7 @@
         display: none
         position: absolute
         top: 100%
-        left: 0
+        left: 123px
         background-color: #333
         padding: 10px
         li
@@ -57,6 +63,12 @@
   @media screen and (max-width: 768px)
     .hamburger-btn
       display: block // Mostramos el botón solo en pantallas pequeñas
+
+    .logo
+      display: block
+      margin-left: auto
+      margin-right: auto
+
 
     ul
       flex-direction: column
